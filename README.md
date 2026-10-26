@@ -19,7 +19,7 @@ To run this pipeline locally, open your Terminal on macOS and clone the project 
 
 The curated financial data from the pipeline feeds directly into an executive Power BI dashboard.
 
-![Dashboard Overview](power_bi/images/dashboard_overview.png)
+![Dashboard Overview](power_bI/images/dashboard_overview .png)
 
 ### Key Visual Features & DAX Measures
 * **Multi-Statement Relational Model:** Joins normalized statement tables via composite keys.
