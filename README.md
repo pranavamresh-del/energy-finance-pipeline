@@ -14,3 +14,15 @@ In addition to individual company financial statements, the pipeline generates a
 
 ## Setup & Execution Guide
 To run this pipeline locally, open your Terminal on macOS and clone the project repository by running git clone https://github.com/your-username/corporate-finance-pipeline.git, then navigate into the project root directory with cd corporate-finance-pipeline. Create and activate an isolated Python virtual environment by entering python3 -m venv venv followed by source venv/bin/activate, which isolates your dependencies. Install the required data engineering and modeling libraries by executing pip install yfinance pandas sqlalchemy openpyxl. Once the environment is configured, execute python build_pipeline.py in your terminal to extract the raw financial filings, resolve schema differences, and generate the energy_financials.db database. Finally, run python export_to_excel.py to query the database, pull current valuation data, and generate the fully formatted Energy_Financial_Model.xlsx workbook ready for financial analysis and presentation.
+
+## Power BI Financial Reporting Layer
+
+The curated financial data from the pipeline feeds directly into an executive Power BI dashboard.
+
+![Dashboard Overview](power_bi/images/dashboard_overview.png)
+
+### Key Visual Features & DAX Measures
+* **Multi-Statement Relational Model:** Joins normalized statement tables via composite keys.
+* **Free Cash Flow (FCF):** Cash generated after capital reinvestment.
+* **OCF Margin %:** Operational cash conversion relative to revenue.
+* **Capital Returns & Solvency:** ROE % and Debt-to-Equity tracking over multi-year reporting cycles.
